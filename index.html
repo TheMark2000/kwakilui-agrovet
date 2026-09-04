@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwa-Kilui Agrovet — Grow With Us</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #fcf9f5;
+            color: #1e2e1e;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2a1a 0%, #1f4430 40%, #2d5e3b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            overflow: hidden;
+        }
+
+        /* Floating orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: floatOrb 12s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #f5c842;
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: #4caf84;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: 4s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: #d49b1f;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 8s;
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(40px, -40px) scale(1.2);
+            }
+        }
+
+        /* Wave shape at bottom of hero */
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .hero-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+        }
+
+        .hero-wave .shape-fill {
+            fill: #fcf9f5;
+        }
+
+        /* Hero content */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            padding: 8px 28px;
+            border-radius: 100px;
+            color: #f5c842;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            animation: pulseBadge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseBadge {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #f5c842, #ffd966);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto 35px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+            animation: bounceDown 2s ease-in-out infinite;
+        }
+
+        .scroll-indicator .mouse {
+            width: 24px;
+            height: 38px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator .mouse::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: #f5c842;
+            border-radius: 4px;
+            animation: scrollDot 1.8s ease-in-out infinite;
+        }
+
+        @keyframes scrollDot {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-50%) translateY(14px);
+                opacity: 0.2;
+            }
+        }
+
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* ===== SECTION: WHAT WE OFFER ===== */
+        .offer-section {
+            padding: 100px 20px 80px;
+            background: #fcf9f5;
+            position: relative;
+        }
+
+        .section-divider-top {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .section-divider-top svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+
+        .section-divider-top .shape-fill {
+            fill: #fcf9f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(45, 94, 59, 0.08);
+            color: #2d5e3b;
+            padding: 6px 22px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0f2a1a;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .section-title .highlight {
+            color: #2d5e3b;
+            position: relative;
+        }
+
+        .section-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(245, 200, 66, 0.3);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .section-sub {
+            font-size: 1.15rem;
+            color: #5a6b5a;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* Offer grid */
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .offer-card {
+            background: #fff;
+            border-radius: 40px 20px 40px 20px;
+            padding: 40px 30px 35px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.04);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            cursor: default;
+        }
+
+        .offer-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 30px;
+            right: 30px;
+            height: 4px;
+            background: linear-gradient(90deg, #2d5e3b, #f5c842, #2d5e3b);
+            border-radius: 0 0 50% 50%;
+            transform: scaleX(0);
+            transition: transform 0.6s ease;
+            transform-origin: center;
+        }
+
+        .offer-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-16px) scale(1.02);
+            box-shadow: 0 30px 70px rgba(45, 94, 59, 0.10);
+            border-radius: 20px 40px 20px 40px;
+        }
+
+        .offer-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f5c84215, #2d5e3b15);
+            border-radius: 30px 10px 30px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            margin: 0 auto 18px;
+            transition: all 0.5s ease;
+        }
+
+        .offer-card:hover .offer-icon {
+            transform: rotate(-5deg) scale(1.1);
+            border-radius: 10px 30px 10px 30px;
+            background: linear-gradient(135deg, #f5c84225, #2d5e3b25);
+        }
+
+        .offer-card h3 {
+            font-size: 1.3rem;
+            color: #0f2a1a;
+            margin-bottom: 8px;
+        }
+
+        .offer-card p {
+            color: #5a6b5a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .offer-card .card-number {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(45, 94, 59, 0.04);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products-section {
+            padding: 90px 20px 80px;
+            background: linear-gradient(180deg, #fcf9f5 0%, #f5f0ea 100%);
+            position: relative;
+        }
+
+        .products-section .section-title {
+            text-align: center;
+        }
+
+        .products-section .section-sub {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        /* Category tabs */
+        .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 35px 0 45px;
+        }
+
+        .category-tab {
+            padding: 10px 28px;
+            border-radius: 60px;
+            border: 2px solid rgba(45, 94, 59, 0.15);
+            background: transparent;
+            color: #2d5e3b;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .category-tab:hover {
+            border-color: #2d5e3b;
+            background: rgba(45, 94, 59, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .category-tab.active {
+            background: #2d5e3b;
+            color: #fff;
+            border-color: #2d5e3b;
+            box-shadow: 0 8px 25px rgba(45, 94, 59, 0.2);
+        }
+
+        /* Products grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 30px 10px 30px 10px;
+            padding: 30px 25px 28px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(45, 94, 59, 0.08);
+            border-radius: 10px 30px 10px 30px;
+        }
+
+        .product-card .product-icon {
+            font-size: 3.4rem;
+            display: block;
+            margin-bottom: 14px;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .product-card .product-badge {
+            display: inline-block;
+            background: rgba(245, 200, 66, 0.15);
+            color: #b8860b;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h4 {
+            font-size: 1.15rem;
+            color: #0f2a1a;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .product-card p {
+            color: #5a6b5a;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        /* Decorative element on cards */
+        .product-card::after {
+            content: '✦';
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 2.5rem;
+            color: rgba(45, 94, 59, 0.04);
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .product-card:hover::after {
+            transform: rotate(90deg);
+            color: rgba(45, 94, 59, 0.08);
+        }
+
+        /* Product card accent line */
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #2d5e3b, #f5c842, #2d5e3b, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        /* ===== STATS SECTION ===== */
+        .stats-section {
+            background: linear-gradient(135deg, #0f2a1a, #1f4430);
+            padding: 80px 20px;
+            position: relative;
+            margin-top: -2px;
+        }
+
+        .stats-wave-top {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .stats-wave-top svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 60px;
+        }
+
+        .stats-wave-top .shape-fill {
+            fill: #fcf9f5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f5c842, #ffd966);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.7;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-item .stat-icon {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulseWhatsApp 2s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulseWhatsApp {
+            0%,
+            100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 50px rgba(37, 211, 102, 0.6);
+            }
+        }
+
+        .whatsapp-float .tooltip {
+            position: absolute;
+            right: 70px;
+            background: #0f2a1a;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .whatsapp-float:hover .tooltip {
+            opacity: 1;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #1f4430, #0f2a1a);
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '🌾';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.03;
+            right: -50px;
+            bottom: -80px;
+            transform: rotate(-10deg);
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 span {
+            color: #f5c842;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: #f5c842;
+            color: #0f2a1a;
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(245, 200, 66, 0.3);
+            background: #e6b835;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0a1f14;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .footer h4 {
+            color: #f5c842;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer p,
+        .footer a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #f5c842;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 25px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom strong {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .stat-number {
+                font-size: 2.6rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .offer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-wave {
+                height: 60px;
+            }
+
+            .hero-wave svg {
+                height: 60px;
+            }
+
+            .scroll-indicator {
+                bottom: 90px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .btn-primary {
+                padding: 14px 30px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+
+            .category-tabs {
+                gap: 8px;
+            }
+
+            .category-tab {
+                padding: 8px 18px;
+                font-size: 0.82rem;
+            }
+
+            .whatsapp-float .tooltip {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">🌱 Serving Farmers Since 2015</div>
+            <h1>
+                Grow More<br>
+                <span class="highlight">With Kwa-Kilui Agrovet</span>
+            </h1>
+            <p>
+                Premium animal feeds, farm equipment, certified seeds, fertilizers, and expert advice —
+                all under one roof. Your partner in sustainable farming.
+            </p>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll to explore</span>
+        </div>
+
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== WHAT WE OFFER ===== -->
+    <section class="offer-section" id="offer">
+        <div class="section-divider-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">✦ What We Offer</span>
+                <h2 class="section-title">
+                    Everything You Need<br>
+                    <span class="highlight">To Farm Smarter</span>
+                </h2>
+                <p class="section-sub">
+                    From high-quality inputs to expert guidance — we empower farmers to achieve better yields and healthier livestock.
+                </p>
+            </div>
+
+            <div class="offer-grid">
+                <div class="offer-card reveal">
+                    <span class="card-number">01</span>
+                    <div class="offer-icon">🐄</div>
+                    <h3>Premium Animal Feeds</h3>
+                    <p>Nutritionally balanced feeds for dairy, poultry, pigs, and all livestock — formulated for optimal health and productivity.</p>
+                </div>
+
+                <div class="offer-card reveal">
+                    <span class="card-number">02</span>
+                    <div class="offer-icon">🚜</div>
+                    <h3>Farm Equipment</h3>
+                    <p>Reliable tools and machinery for planting, harvesting, irrigation, and maintenance — built to last the season.</p>
+                </div>
+
+                <div class="offer-card reveal">
+                    <span class="card-number">03</span>
+                    <div class="offer-icon">🌿</div>
+                    <h3>Seeds &amp; Fertilizers</h3>
+                    <p>High-yield certified seeds and quality fertilizers to maximize your crop production season after season.</p>
+                </div>
+
+                <div class="offer-card reveal">
+                    <span class="card-number">04</span>
+                    <div class="offer-icon">🧑‍🌾</div>
+                    <h3>Expert Agricultural Advice</h3>
+                    <p>Get personalized guidance from our experienced agronomists — we're here to help you succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS SHOWCASE ===== -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">🛒 Our Products</span>
+                <h2 class="section-title">
+                    Quality Products for <span class="highlight">Every Need</span>
+                </h2>
+                <p class="section-sub" style="margin:0 auto 10px;">
+                    Carefully selected, premium-quality agricultural products to help you grow more and farm better.
+                </p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs reveal">
+                <button class="category-tab active" data-category="all">🌾 All Products</button>
+                <button class="category-tab" data-category="feeds">🐄 Animal Feeds</button>
+                <button class="category-tab" data-category="equipment">🚜 Farm Equipment</button>
+                <button class="category-tab" data-category="seeds">🌱 Seeds & Fertilizers</button>
+                <button class="category-tab" data-category="health">💉 Animal Health</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Feeds -->
+                <div class="product-card" data-category="feeds">
+                    <span class="product-icon">🌾</span>
+                    <span class="product-badge">Best Seller</span>
+                    <h4>Dairy Meal</h4>
+                    <p>Premium fortified dairy feed for high milk production</p>
+                </div>
+
+                <div class="product-card" data-category="feeds">
+                    <span class="product-icon">🐔</span>
+                    <span class="product-badge">Popular</span>
+                    <h4>Poultry Layers Mash</h4>
+                    <p>Complete feed for optimal egg production in layers</p>
+                </div>
+
+                <div class="product-card" data-category="feeds">
+                    <span class="product-icon">🐖</span>
+                    <span class="product-badge">New</span>
+                    <h4>Pig Grower Pellets</h4>
+                    <p>High-protein pellets for healthy pig growth</p>
+                </div>
+
+                <div class="product-card" data-category="feeds">
+                    <span class="product-icon">🐑</span>
+                    <span class="product-badge">Premium</span>
+                    <h4>Goat & Sheep Supplement</h4>
+                    <p>Mineral-rich supplement for goats and sheep</p>
+                </div>
+
+                <!-- Equipment -->
+                <div class="product-card" data-category="equipment">
+                    <span class="product-icon">💨</span>
+                    <span class="product-badge">Heavy Duty</span>
+                    <h4>Knapsack Sprayer</h4>
+                    <p>20L professional sprayer for pesticides and herbicides</p>
+                </div>
+
+                <div class="product-card" data-category="equipment">
+                    <span class="product-icon">⛏️</span>
+                    <span class="product-badge">Essential</span>
+                    <h4>Jembe & Garden Tools</h4>
+                    <p>Durable jembes, hoes, and rakes for all farming needs</p>
+                </div>
+
+                <div class="product-card" data-category="equipment">
+                    <span class="product-icon">💧</span>
+                    <span class="product-badge">Irrigation</span>
+                    <h4>Drip Irrigation Kit</h4>
+                    <p>Complete drip irrigation system for water efficiency</p>
+                </div>
+
+                <div class="product-card" data-category="equipment">
+                    <span class="product-icon">✂️</span>
+                    <span class="product-badge">Pruning</span>
+                    <h4>Pruning Shears</h4>
+                    <p>Professional-grade shears for fruit trees and vines</p>
+                </div>
+
+                <!-- Seeds & Fertilizers -->
+                <div class="product-card" data-category="seeds">
+                    <span class="product-icon">🌽</span>
+                    <span class="product-badge">Hybrid</span>
+                    <h4>Hybrid Maize Seed</h4>
+                    <p>High-yield drought-tolerant hybrid maize (10kg pack)</p>
+                </div>
+
+                <div class="product-card" data-category="seeds">
+                    <span class="product-icon">🥬</span>
+                    <span class="product-badge">Vegetable</span>
+                    <h4>Kale & Spinach Seeds</h4>
+                    <p>High-germination vegetable seeds for kitchen gardens</p>
+                </div>
+
+                <div class="product-card" data-category="seeds">
+                    <span class="product-icon">🧪</span>
+                    <span class="product-badge">Fertilizer</span>
+                    <h4>NPK Compound Fertilizer</h4>
+                    <p>Balanced 17:17:17 fertilizer for all crops</p>
+                </div>
+
+                <div class="product-card" data-category="seeds">
+                    <span class="product-icon">🌱</span>
+                    <span class="product-badge">Organic</span>
+                    <h4>Organic Compost Manure</h4>
+                    <p>Rich organic manure for soil conditioning</p>
+                </div>
+
+                <!-- Animal Health -->
+                <div class="product-card" data-category="health">
+                    <span class="product-icon">💉</span>
+                    <span class="product-badge">Vaccine</span>
+                    <h4>Livestock Vaccines</h4>
+                    <p>Vaccines for FMD, CBPP, and other livestock diseases</p>
+                </div>
+
+                <div class="product-card" data-category="health">
+                    <span class="product-icon">🧴</span>
+                    <span class="product-badge">Treatment</span>
+                    <h4>Dewormers & Acaricides</h4>
+                    <p>Effective dewormers and tick control solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section">
+        <div class="stats-wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-icon">🌾</span>
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Farmers Served</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-number">97%</span>
+                <span class="stat-label">Satisfaction Rate</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-icon">📦</span>
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Products Available</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-icon">🏆</span>
+                <span class="stat-number">10 Yrs</span>
+                <span class="stat-label">Trusted Experience</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section" id="contact">
+        <h2>
+            Ready to <span>Grow</span> With Us?
+        </h2>
+        <p>Visit us at Kwa-kilui market or reach out — we're here to help you succeed.</p>
+        <div class="cta-buttons">
+            <a href="#products" class="btn-primary">🌾 Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>🌿 Kwa-Kilui Agrovet</h4>
+                <p>Your trusted agricultural partner since 2015.</p>
+            </div>
+            <div>
+                <h4>📍 Location</h4>
+                <p>Kwa-kilui market, off the main road</p>
+            </div>
+            <div>
+                <h4>📞 Contact</h4>
+                <p>0721 892 173</p>
+                <p>0710 930 725</p>
+            </div>
+            <div>
+                <h4>✉️ Email</h4>
+                <p>info@kwakiluiagrovet.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Growing together, sustainably.
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/254721892173" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <span class="tooltip">Chat with us 💬</span>
+        💬
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Scroll Reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        reveals.forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Category Filter
+        const tabs = document.querySelectorAll('.category-tab');
+        const products = document.querySelectorAll('.product-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.style.display = 'flex';
+                        product.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add fadeIn animation for filtered products
+        const style = document.createElement('style');
+        style.textContent = `
+                    @keyframes fadeIn {
+                        0% { opacity: 0; transform: scale(0.95); }
+                        100% { opacity: 1; transform: scale(1); }
+                    }
+                `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>
