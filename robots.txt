@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kwakilui-agrovet.vercel.app/sitemap.xml
