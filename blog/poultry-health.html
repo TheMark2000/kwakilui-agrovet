@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Best Practices for Healthy Chickens - Kwa-Kilui Agrovet</title>
+    <meta name="description" content="Essential tips for keeping your poultry flock healthy. Expert advice from Kwa-Kilui Agrovet.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kwa-Kilui Agrovet">
+    
+    <meta property="og:title" content="Best Practices for Healthy Chickens">
+    <meta property="og:description" content="Essential tips for keeping your poultry flock healthy and productive.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kwakilui-agrovet.vercel.app/blog/poultry-health.html">
+    
+    <style>
+        /* Same styles as dairy-tips.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #fcf9f5;
+            color: #1e2e1e;
+        }
+
+        .navbar {
+            background: #0f281b;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: #f5c842;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 15px 0;
+            text-decoration: none;
+        }
+
+        .nav-logo small {
+            color: #a8c9a1;
+            font-weight: 300;
+            font-size: 0.8rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu li a {
+            color: #e8f0e5;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-menu li a:hover {
+            background: rgba(245, 200, 66, 0.15);
+            color: #f5c842;
+        }
+
+        .blog-post-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 20px 80px;
+        }
+
+        .back-to-blog {
+            display: inline-block;
+            color: #2d5e3b;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-blog:hover {
+            color: #f5c842;
+        }
+
+        .blog-post-header {
+            margin-bottom: 30px;
+        }
+
+        .blog-post-header .post-tag {
+            display: inline-block;
+            background: rgba(45, 94, 59, 0.08);
+            color: #2d5e3b;
+            padding: 4px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .blog-post-header h1 {
+            font-size: 2.8rem;
+            color: #0f2a1a;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .blog-post-header .post-meta {
+            color: #7a8a7a;
+            font-size: 0.95rem;
+        }
+
+        .blog-post-header .post-meta span {
+            margin-right: 20px;
+        }
+
+        .blog-post-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 30px 10px 30px 10px;
+            background: linear-gradient(135deg, #e8e0d6, #d5cdc0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-post-image .image-fallback {
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .blog-post-body h2 {
+            font-size: 1.8rem;
+            color: #0f2a1a;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .blog-post-body h3 {
+            font-size: 1.3rem;
+            color: #0f2a1a;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        .blog-post-body p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #3a4a3a;
+            margin-bottom: 16px;
+        }
+
+        .blog-post-body ul,
+        .blog-post-body ol {
+            margin: 16px 0 20px 24px;
+            color: #3a4a3a;
+            line-height: 1.8;
+        }
+
+        .blog-post-body li {
+            margin-bottom: 8px;
+        }
+
+        .blog-post-body .tip-box {
+            background: rgba(45, 94, 59, 0.05);
+            border-left: 4px solid #f5c842;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .blog-post-body .tip-box strong {
+            color: #0f2a1a;
+        }
+
+        .footer {
+            background: #0a1f14;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .footer h4 {
+            color: #f5c842;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer p,
+        .footer a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+        }
+
+        .footer a:hover {
+            color: #f5c842;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 25px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom strong {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-header h1 {
+                font-size: 2rem;
+            }
+            .blog-post-image {
+                height: 250px;
+            }
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-menu {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header h1 {
+                font-size: 1.6rem;
+            }
+            .blog-post-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                Kwa-Kilui <small>Agrovet</small>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#veterinary">Veterinary</a></li>
+                <li><a href="../index.html#products">Products</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="blog-post-container">
+        <a href="../blog.html" class="back-to-blog">← Back to Blog</a>
+
+        <div class="blog-post-header">
+            <span class="post-tag">Poultry Farming</span>
+            <h1>Best Practices for Healthy Chickens</h1>
+            <div class="post-meta">
+                <span>September 2026</span>
+                <span>6 min read</span>
+                <span>By Kwa-Kilui Agrovet</span>
+            </div>
+        </div>
+
+        <div class="blog-post-image">
+            <img src="../images/blog-poultry.jpg" alt="Poultry health tips">
+            <span class="image-fallback">🐔</span>
+        </div>
+
+        <div class="blog-post-body">
+            <p>
+                Keeping your poultry flock healthy is essential for productivity and profitability. Whether you're raising chickens for eggs or meat, these best practices will help you maintain a healthy flock.
+            </p>
+
+            <h2>1. Provide Quality Nutrition</h2>
+            <p>
+                Chickens need a balanced diet for optimal health. Ensure your birds have access to:
+            </p>
+            <ul>
+                <li><strong>Quality feeds</strong> — starter, grower, and layer feeds appropriate for their age</li>
+                <li><strong>Clean water</strong> — always available and refreshed daily</li>
+                <li><strong>Grit and calcium</strong> — for digestion and strong eggshells</li>
+                <li><strong>Fresh greens</strong> — as a supplement for vitamins</li>
+            </ul>
+            <div class="tip-box">
+                <strong>Expert Tip:</strong> Visit Kwa-Kilui Agrovet for quality poultry feeds and nutritional supplements.
+            </div>
+
+            <h2>2. Maintain Proper Housing</h2>
+            <p>
+                A clean, well-ventilated chicken house is crucial for health:
+            </p>
+            <ul>
+                <li>Ensure proper ventilation to prevent respiratory issues</li>
+                <li>Provide enough space — overcrowding leads to stress and disease</li>
+                <li>Keep the house dry and clean to prevent disease outbreaks</li>
+                <li>Use proper bedding materials like wood shavings or rice husks</li>
+            </ul>
+
+            <h2>3. Practice Biosecurity</h2>
+            <p>
+                Preventing diseases from entering your flock is key:
+            </p>
+            <ul>
+                <li>Control visitors and limit access to your poultry house</li>
+                <li>Disinfect equipment and footwear between flocks</li>
+                <li>Quarantine new birds before introducing them to the flock</li>
+                <li>Keep wild birds away from your chickens</li>
+            </ul>
+
+            <h2>4. Follow a Vaccination Schedule</h2>
+            <p>
+                Vaccinations protect your flock from common diseases:
+            </p>
+            <ul>
+                <li>Vaccinate against Newcastle Disease and Gumboro</li>
+                <li>Follow the recommended vaccination schedule for your area</li>
+                <li>Work with a qualified veterinarian for guidance</li>
+            </ul>
+            <div class="tip-box">
+                <strong>Expert Tip:</strong> Kwa-Kilui Agrovet's veterinary team can help you with vaccination schedules and health management.
+            </div>
+
+            <h2>5. Monitor Health Daily</h2>
+            <p>
+                Regular observation helps catch problems early:
+            </p>
+            <ul>
+                <li>Check for signs of illness like lethargy, reduced appetite, or abnormal droppings</li>
+                <li>Monitor egg production and quality</li>
+                <li>Look for signs of parasites like mites or lice</li>
+                <li>Act quickly if you notice any health issues</li>
+            </ul>
+
+            <h3>Need Help with Your Poultry Flock?</h3>
+            <p>
+                For quality poultry feeds, veterinary services, and expert advice, visit Kwa-Kilui Agrovet at Kwa-kilui market 
+                or call 0710930725. Our team is here to help you succeed!
+            </p>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Kwa-Kilui Agrovet</h4>
+                <p>Veterinary services &amp; farm supplies.</p>
+            </div>
+            <div>
+                <h4>Location</h4>
+                <p>Kwa-kilui market</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>0710 930 725</p>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <p>info@kwakiluiagrovet.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Farming tips &amp; advice.
+        </div>
+    </footer>
+
+</body>
+</html>
