@@ -6,16 +6,16 @@
     <meta property="og:image" content="https://via.placeholder.com/1200x630/0f2a1a/f5c842?text=Kwa-Kilui+Agrovet">
     
     <!-- ===== PRIMARY SEO TAGS ===== -->
-    <title>Kwa-Kilui Agrovet - Veterinary Services & Premium Farm Supplies in Kenya</title>
-    <meta name="description" content="Your trusted agrovet since 2015. We offer professional veterinary services, premium animal feeds, farm equipment, seeds, and fertilizers in Kwa-kilui, Kenya. Call 0721 892 173 today!">
-    <meta name="keywords" content="veterinary services, agrovet, animal feeds, farm equipment, seeds, fertilizers, agricultural advice, Kwa-kilui, Kenya, farming, livestock, dairy meal, poultry feed">
+    <title>Kwa-Kilui Agrovet - Weather Advisory, Seeds & Farm Supplies in Kenya</title>
+    <meta name="description" content="Your trusted agrovet since 2015. We offer weather advisory services, seed selection advice, tick management, drenching, animal feeds, farm equipment, seeds, and fertilizers in Kwa-kilui, Kenya. Call 0721 892 173 today!">
+    <meta name="keywords" content="weather advisory, seeds, tick management, drenching, deworming, agrovet, animal feeds, farm equipment, fertilizers, Kwa-kilui, Kenya, farming">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kwa-Kilui Agrovet">
     <meta name="google-site-verification" content="xlJaI5ewaSnHlT9ksUh9EjmsuKQ2L1ksbPo_OCqUNw4" />
     
     <!-- ===== OPEN GRAPH ===== -->
-    <meta property="og:title" content="Kwa-Kilui Agrovet - Veterinary Services & Farm Supplies in Kenya">
-    <meta property="og:description" content="Professional veterinary services and quality farm supplies in Kwa-kilui, Kenya.">
+    <meta property="og:title" content="Kwa-Kilui Agrovet - Weather Advisory, Seeds & Farm Supplies in Kenya">
+    <meta property="og:description" content="Weather advisory services, seed selection advice, tick management, drenching, and quality farm supplies in Kwa-kilui, Kenya.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kwakilui-agrovet.vercel.app">
     <meta property="og:image" content="https://kwakilui-agrovet.vercel.app/images/og-image.jpg">
@@ -23,17 +23,17 @@
     
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kwa-Kilui Agrovet - Veterinary Services & Farm Supplies">
-    <meta name="twitter:description" content="Professional veterinary services and quality farm supplies in Kwa-kilui, Kenya.">
+    <meta name="twitter:title" content="Kwa-Kilui Agrovet - Weather Advisory, Seeds & Farm Supplies">
+    <meta name="twitter:description" content="Weather advisory services, seed selection advice, tick management, drenching, and quality farm supplies in Kwa-kilui, Kenya.">
     <meta name="twitter:image" content="https://kwakilui-agrovet.vercel.app/images/og-image.jpg">
     
     <!-- ===== STRUCTURED DATA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "VeterinaryCare",
+      "@type": "LocalBusiness",
       "name": "Kwa-Kilui Agrovet",
-      "description": "Professional veterinary services and quality farm supplies in Kwa-kilui, Kenya.",
+      "description": "Weather advisory services, seed selection advice, tick management, drenching, and quality farm supplies in Kwa-kilui, Kenya.",
       "image": "https://kwakilui-agrovet.vercel.app/images/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
@@ -174,6 +174,41 @@
             margin: 0 auto;
         }
 
+        /* ===== SITE TITLE / LOGO ===== */
+        .site-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .site-icon {
+            font-size: 2.8rem;
+            display: inline-block;
+        }
+
+        .site-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #f5c842, #ffd966);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .site-name::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #f5c842, transparent);
+            margin: 4px auto 0;
+            border-radius: 4px;
+            opacity: 0.5;
+        }
+
         .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.12);
@@ -299,7 +334,7 @@
         }
 
         .offer-card:hover .image-placeholder img,
-        .vet-card:hover .image-placeholder img,
+        .service-card:hover .image-placeholder img,
         .product-card:hover .image-placeholder img {
             transform: scale(1.05);
         }
@@ -480,30 +515,30 @@
             line-height: 1.6;
         }
 
-        /* ===== VETERINARY SERVICES SECTION ===== */
-        .vet-section {
+        /* ===== SERVICES SECTION (Weather + Animal) ===== */
+        .services-section {
             padding: 90px 20px 80px;
             background: linear-gradient(180deg, #f5f0ea 0%, #e8e0d6 100%);
             position: relative;
         }
 
-        .vet-section .section-title {
+        .services-section .section-title {
             text-align: center;
         }
 
-        .vet-section .section-sub {
+        .services-section .section-sub {
             text-align: center;
             margin: 0 auto 20px;
         }
 
-        .vet-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
             margin-top: 45px;
         }
 
-        .vet-card {
+        .service-card {
             background: #fff;
             border-radius: 30px 10px 30px 10px;
             padding: 25px 22px 28px;
@@ -515,36 +550,36 @@
             overflow: hidden;
         }
 
-        .vet-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(45, 94, 59, 0.08);
             border-radius: 10px 30px 10px 30px;
         }
 
-        .vet-card .image-placeholder {
+        .service-card .image-placeholder {
             height: 180px;
             border-radius: 20px 8px 20px 8px;
         }
 
-        .vet-card .image-placeholder .icon-overlay {
+        .service-card .image-placeholder .icon-overlay {
             font-size: 2.8rem;
         }
 
-        .vet-card h4 {
+        .service-card h4 {
             font-size: 1.15rem;
             color: #0f2a1a;
             margin-bottom: 6px;
             font-weight: 700;
         }
 
-        .vet-card p {
+        .service-card p {
             color: #5a6b5a;
             font-size: 0.92rem;
             line-height: 1.6;
         }
 
-        .vet-card::after {
-            content: '🐾';
+        .service-card::after {
+            content: '✦';
             position: absolute;
             bottom: 10px;
             right: 15px;
@@ -554,12 +589,12 @@
             transition: all 0.4s ease;
         }
 
-        .vet-card:hover::after {
+        .service-card:hover::after {
             transform: rotate(90deg);
             color: rgba(45, 94, 59, 0.08);
         }
 
-        .vet-card::before {
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -571,7 +606,7 @@
             transition: opacity 0.4s ease;
         }
 
-        .vet-card:hover::before {
+        .service-card:hover::before {
             opacity: 1;
         }
 
@@ -941,28 +976,80 @@
             transform: translateY(-4px);
             background: rgba(245, 200, 66, 0.05);
         }
-        
-/* ===== TERTIARY BUTTON (BLOG) ===== */
-.btn-tertiary {
-    background: transparent;
-    color: #f5c842;
-    padding: 16px 44px;
-    border-radius: 60px;
-    font-weight: 600;
-    font-size: 1.05rem;
-    border: 2px solid rgba(245, 200, 66, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
 
-.btn-tertiary:hover {
-    background: rgba(245, 200, 66, 0.1);
-    border-color: #f5c842;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(245, 200, 66, 0.15);
-}
+        /* ===== TERTIARY BUTTON (BLOG) ===== */
+        .btn-tertiary {
+            background: transparent;
+            color: #f5c842;
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: 2px solid rgba(245, 200, 66, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-tertiary:hover {
+            background: rgba(245, 200, 66, 0.1);
+            border-color: #f5c842;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(245, 200, 66, 0.15);
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #f5f0ea 0%, #fcf9f5 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 30px 10px 30px 10px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(45,94,59,0.06);
+        }
+
+        .testimonial-card .stars {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #f5c842;
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #3a4a3a;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            color: #0f2a1a;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author span {
+            color: #7a8a7a;
+            font-size: 0.85rem;
+        }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1038,7 +1125,7 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .vet-grid {
+            .services-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -1070,12 +1157,19 @@
                 height: 150px;
             }
 
-            .vet-card .image-placeholder {
+            .service-card .image-placeholder {
                 height: 140px;
             }
 
             .product-card .image-placeholder {
                 height: 120px;
+            }
+
+            .site-name {
+                font-size: 2rem;
+            }
+            .site-icon {
+                font-size: 2.2rem;
             }
         }
 
@@ -1088,7 +1182,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .vet-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1128,33 +1222,39 @@
             .image-placeholder {
                 height: 130px;
             }
+
+            .site-name {
+                font-size: 1.6rem;
+            }
+            .site-icon {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
 
-    <div class="hero-content">
-        <!-- ===== SITE NAME / LOGO ===== -->
-        <div class="site-title">
-            <span class="site-icon">🌾</span>
-            <span class="site-name">Kwa-Kilui Agrovet</span>
-        </div>
+        <div class="hero-content">
+            <!-- ===== SITE NAME / LOGO ===== -->
+            <div class="site-title">
+                <span class="site-icon">🌾</span>
+                <span class="site-name">Kwa-Kilui Agrovet</span>
+            </div>
 
-        <div class="hero-badge">🐾 Professional Veterinary Services & Farm Supplies</div>
-        <h1>
-            Healthy Livestock,<br>
-            <span class="highlight">Thriving Farms</span>
-        </h1>
-        <!-- ... -->
+            <div class="hero-badge">🌤️ Weather Advisory & Farm Supplies Since 2015</div>
+            <h1>
+                Smart Farming<br>
+                <span class="highlight">With Kwa-Kilui</span>
+            </h1>
             <p>
-                Professional veterinary services, premium animal feeds, farm equipment, certified seeds, 
-                and fertilizers — all under one roof at Kwa-Kilui Agrovet.
+                Weather advisory services, seed selection expertise, tick management, drenching, premium animal feeds, 
+                farm equipment, and quality farm inputs — all under one roof at Kwa-Kilui Agrovet.
             </p>
         </div>
 
@@ -1186,171 +1286,142 @@
                     <span class="highlight">To Farm Smarter</span>
                 </h2>
                 <p class="section-sub">
-                    From professional veterinary care to high-quality farm inputs — we empower farmers to achieve better yields and healthier livestock.
+                    From weather advisory and seed selection to farm inputs and livestock care — we empower farmers to make informed decisions and achieve better yields.
                 </p>
             </div>
 
             <div class="offer-grid">
-                <!-- Offer 1: Animal Feeds -->
+                <!-- Offer 1: Weather Advisory -->
                 <div class="offer-card reveal">
                     <span class="card-number">01</span>
                     <div class="image-placeholder">
-                        <img src="images/animal-feeds.jpg" alt="Premium Animal Feeds">
+                        <img src="images/weather-advisory.jpg" alt="Weather Advisory Services">
+                        <span class="icon-overlay">🌤️</span>
+                        <div class="no-image">
+                            <span>🌤️</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <h3>Weather Advisory</h3>
+                    <p>Expert meteorological advice to help you plan your farming activities. Get accurate weather forecasts and seasonal predictions tailored to your location.</p>
+                </div>
+
+                <!-- Offer 2: Seed Selection -->
+                <div class="offer-card reveal">
+                    <span class="card-number">02</span>
+                    <div class="image-placeholder">
+                        <img src="images/seed-selection.jpg" alt="Seed Selection & Matching">
+                        <span class="icon-overlay">🌱</span>
+                        <div class="no-image">
+                            <span>🌱</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <h3>Seed Selection & Matching</h3>
+                    <p>Professional advice on selecting the right seeds for your specific weather conditions and soil type. We match seeds with weather patterns for optimal yields.</p>
+                </div>
+
+                <!-- Offer 3: Farm Inputs -->
+                <div class="offer-card reveal">
+                    <span class="card-number">03</span>
+                    <div class="image-placeholder">
+                        <img src="images/farm-inputs.jpg" alt="Quality Farm Inputs">
+                        <span class="icon-overlay">🌾</span>
+                        <div class="no-image">
+                            <span>🌾</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <h3>Quality Farm Inputs</h3>
+                    <p>Premium animal feeds, farm equipment, seeds, fertilizers, and other essential inputs to support your farming operations.</p>
+                </div>
+
+                <!-- Offer 4: Livestock Care -->
+                <div class="offer-card reveal">
+                    <span class="card-number">04</span>
+                    <div class="image-placeholder">
+                        <img src="images/livestock-care.jpg" alt="Livestock Care Services">
                         <span class="icon-overlay">🐄</span>
                         <div class="no-image">
                             <span>🐄</span>
                             Add Image
                         </div>
                     </div>
-                    <h3>Premium Animal Feeds</h3>
-                    <p>Nutritionally balanced feeds for dairy, poultry, pigs, and all livestock — formulated for optimal health and productivity.</p>
-                </div>
-
-                <!-- Offer 2: Farm Equipment -->
-                <div class="offer-card reveal">
-                    <span class="card-number">02</span>
-                    <div class="image-placeholder">
-                        <img src="images/farm-equipment.jpg" alt="Farm Equipment">
-                        <span class="icon-overlay">🚜</span>
-                        <div class="no-image">
-                            <span>🚜</span>
-                            Add Image
-                        </div>
-                    </div>
-                    <h3>Farm Equipment</h3>
-                    <p>Reliable tools and machinery for planting, harvesting, irrigation, and maintenance — built to last the season.</p>
-                </div>
-
-                <!-- Offer 3: Seeds & Fertilizers -->
-                <div class="offer-card reveal">
-                    <span class="card-number">03</span>
-                    <div class="image-placeholder">
-                        <img src="images/seeds-fertilizers.jpg" alt="Seeds & Fertilizers">
-                        <span class="icon-overlay">🌿</span>
-                        <div class="no-image">
-                            <span>🌿</span>
-                            Add Image
-                        </div>
-                    </div>
-                    <h3>Seeds &amp; Fertilizers</h3>
-                    <p>High-yield certified seeds and quality fertilizers to maximize your crop production season after season.</p>
-                </div>
-
-                <!-- Offer 4: Veterinary Services -->
-                <div class="offer-card reveal">
-                    <span class="card-number">04</span>
-                    <div class="image-placeholder">
-                        <img src="images/veterinary-services.jpg" alt="Professional Veterinary Services">
-                        <span class="icon-overlay">👨‍⚕️</span>
-                        <div class="no-image">
-                            <span>👨‍⚕️</span>
-                            Add Image
-                        </div>
-                    </div>
-                    <h3>Professional Veterinary Services</h3>
-                    <p>Expert livestock health consultations, disease diagnosis, treatment, and herd management advice from qualified professionals.</p>
+                    <h3>Livestock Care Services</h3>
+                    <p>Professional tick management and drenching/deworming services to keep your livestock healthy and productive.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== VETERINARY SERVICES SECTION ===== -->
-    <section class="vet-section" id="veterinary">
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="reveal" style="text-align:center;">
-                <span class="section-label">🐾 Veterinary Services</span>
+                <span class="section-label">🌤️ Our Services</span>
                 <h2 class="section-title">
-                    Professional <span class="highlight">Livestock Health</span> Care
+                    Professional <span class="highlight">Advisory &amp; Care</span>
                 </h2>
                 <p class="section-sub" style="margin:0 auto 10px;">
-                    Our qualified veterinary team provides comprehensive health services to keep your livestock healthy and productive.
+                    Our expert services help you make informed farming decisions and keep your livestock healthy.
                 </p>
             </div>
 
-            <div class="vet-grid">
-                <!-- Service 1 -->
-                <div class="vet-card reveal">
+            <div class="services-grid">
+                <!-- Service 1: Weather Advisory -->
+                <div class="service-card reveal">
                     <div class="image-placeholder">
-                        <img src="images/vet-consultation.jpg" alt="Health Consultations">
-                        <span class="icon-overlay">🏥</span>
+                        <img src="images/weather-forecast.jpg" alt="Weather Advisory">
+                        <span class="icon-overlay">🌤️</span>
                         <div class="no-image">
-                            <span>🏥</span>
+                            <span>🌤️</span>
                             Add Image
                         </div>
                     </div>
-                    <h4>Health Consultations</h4>
-                    <p>Professional livestock health assessments and expert advice on disease prevention and management.</p>
+                    <h4>Weather Advisory</h4>
+                    <p>Expert meteorological guidance including seasonal forecasts, rainfall predictions, and weather pattern analysis for better farm planning.</p>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="vet-card reveal">
+                <!-- Service 2: Seed Matching -->
+                <div class="service-card reveal">
                     <div class="image-placeholder">
-                        <img src="images/vet-diagnosis.jpg" alt="Disease Diagnosis & Treatment">
-                        <span class="icon-overlay">🩺</span>
+                        <img src="images/seed-matching.jpg" alt="Seed Matching">
+                        <span class="icon-overlay">🌱</span>
                         <div class="no-image">
-                            <span>🩺</span>
+                            <span>🌱</span>
                             Add Image
                         </div>
                     </div>
-                    <h4>Disease Diagnosis & Treatment</h4>
-                    <p>Accurate diagnosis and effective treatment plans for all livestock diseases and health conditions.</p>
+                    <h4>Seed-Weather Matching</h4>
+                    <p>Professional advice on selecting seeds that are best suited for your local weather conditions, soil type, and farming goals.</p>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="vet-card reveal">
+                <!-- Service 3: Tick Management -->
+                <div class="service-card reveal">
                     <div class="image-placeholder">
-                        <img src="images/vet-herd-management.jpg" alt="Herd Health Management">
+                        <img src="images/tick-management.jpg" alt="Tick Management">
                         <span class="icon-overlay">🐄</span>
                         <div class="no-image">
                             <span>🐄</span>
                             Add Image
                         </div>
                     </div>
-                    <h4>Herd Health Management</h4>
-                    <p>Comprehensive herd health programs including vaccination supervision and biosecurity advice.</p>
+                    <h4>Tick Management</h4>
+                    <p>Effective tick control strategies and treatments to protect your livestock from tick-borne diseases.</p>
                 </div>
 
-                <!-- Service 4 --
-                <div class="vet-card reveal">
+                <!-- Service 4: Drenching -->
+                <div class="service-card reveal">
                     <div class="image-placeholder">
-                        <img src="images/vet-ai.jpg" alt="Artificial Insemination">
-                        <span class="icon-overlay">🔬</span>
+                        <img src="images/drenching.jpg" alt="Drenching & Deworming">
+                        <span class="icon-overlay">💉</span>
                         <div class="no-image">
-                            <span>🔬</span>
+                            <span>💉</span>
                             Add Image
                         </div>
                     </div>
-                    <h4>Artificial Insemination</h4>
-                    <p>Professional AI services to improve your herd genetics and productivity.</p>
-                </div>
-                -->
-
-                <!-- Service 5 -->
-                <div class="vet-card reveal">
-                    <div class="image-placeholder">
-                        <img src="images/vet-nutrition.jpg" alt="Dairy & Livestock Nutrition">
-                        <span class="icon-overlay">🥛</span>
-                        <div class="no-image">
-                            <span>🥛</span>
-                            Add Image
-                        </div>
-                    </div>
-                    <h4>Dairy & Livestock Nutrition</h4>
-                    <p>Specialized nutritional advice for optimal milk production and livestock growth.</p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="vet-card reveal">
-                    <div class="image-placeholder">
-                        <img src="images/vet-emergency.jpg" alt="Emergency Veterinary Care">
-                        <span class="icon-overlay">🚑</span>
-                        <div class="no-image">
-                            <span>🚑</span>
-                            Add Image
-                        </div>
-                    </div>
-                    <h4>Emergency Veterinary Care</h4>
-                    <p>Prompt emergency response for sick or injured livestock to minimize losses.</p>
+                    <h4>Drenching &amp; Deworming</h4>
+                    <p>Professional drenching and deworming services to control internal parasites and maintain livestock health.</p>
                 </div>
             </div>
         </div>
@@ -1367,7 +1438,9 @@
                 <p class="section-sub" style="margin:0 auto 10px;">
                     Carefully selected, premium-quality agricultural products to help you grow more and farm better.
                 </p>
-                
+                <p class="note">
+                    <em>We provide advisory and livestock care services but do not sell animal drugs or medications.</em>
+                </p>
             </div>
 
             <!-- Category Tabs -->
@@ -1378,181 +1451,181 @@
                 <button class="category-tab" data-category="seeds">Seeds & Fertilizers</button>
             </div>
 
-           <!-- Products Grid -->
-<div class="products-grid" id="productsGrid">
-    <!-- Feeds -->
-    <div class="product-card" data-category="feeds">
-        <div class="image-placeholder">
-            <img src="images/dairy-feeds.jpg" alt="Quality Dairy Feeds">
-            <span class="icon-overlay">🐄</span>
-            <div class="no-image">
-                <span>🐄</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Best Seller</span>
-        <h4>Quality Dairy Feeds</h4>
-        <p>Premium fortified dairy feeds for high milk production</p>
-    </div>
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Feeds -->
+                <div class="product-card" data-category="feeds">
+                    <div class="image-placeholder">
+                        <img src="images/dairy-feeds.jpg" alt="Quality Dairy Feeds">
+                        <span class="icon-overlay">🐄</span>
+                        <div class="no-image">
+                            <span>🐄</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Best Seller</span>
+                    <h4>Quality Dairy Feeds</h4>
+                    <p>Premium fortified dairy feeds for high milk production</p>
+                </div>
 
-    <div class="product-card" data-category="feeds">
-        <div class="image-placeholder">
-            <img src="images/poultry-feeds.jpg" alt="Poultry Feeds">
-            <span class="icon-overlay">🐔</span>
-            <div class="no-image">
-                <span>🐔</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Popular</span>
-        <h4>Poultry Feeds</h4>
-        <p>Complete feeds for optimal egg and meat production</p>
-    </div>
+                <div class="product-card" data-category="feeds">
+                    <div class="image-placeholder">
+                        <img src="images/poultry-feeds.jpg" alt="Poultry Feeds">
+                        <span class="icon-overlay">🐔</span>
+                        <div class="no-image">
+                            <span>🐔</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Popular</span>
+                    <h4>Poultry Feeds</h4>
+                    <p>Complete feeds for optimal egg and meat production</p>
+                </div>
 
-    <div class="product-card" data-category="feeds">
-        <div class="image-placeholder">
-            <img src="images/livestock-feeds.jpg" alt="Livestock Feeds">
-            <span class="icon-overlay">🐖</span>
-            <div class="no-image">
-                <span>🐖</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">New</span>
-        <h4>Livestock Feeds</h4>
-        <p>High-quality feeds for pigs, cattle, and other livestock</p>
-    </div>
+                <div class="product-card" data-category="feeds">
+                    <div class="image-placeholder">
+                        <img src="images/livestock-feeds.jpg" alt="Livestock Feeds">
+                        <span class="icon-overlay">🐖</span>
+                        <div class="no-image">
+                            <span>🐖</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">New</span>
+                    <h4>Livestock Feeds</h4>
+                    <p>High-quality feeds for pigs, cattle, and other livestock</p>
+                </div>
 
-    <div class="product-card" data-category="feeds">
-        <div class="image-placeholder">
-            <img src="images/small-stock-feeds.jpg" alt="Small Stock Feeds">
-            <span class="icon-overlay">🐑</span>
-            <div class="no-image">
-                <span>🐑</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Premium</span>
-        <h4>Small Stock Feeds</h4>
-        <p>Mineral-rich feeds for goats, sheep, and rabbits</p>
-    </div>
+                <div class="product-card" data-category="feeds">
+                    <div class="image-placeholder">
+                        <img src="images/small-stock-feeds.jpg" alt="Small Stock Feeds">
+                        <span class="icon-overlay">🐑</span>
+                        <div class="no-image">
+                            <span>🐑</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Premium</span>
+                    <h4>Small Stock Feeds</h4>
+                    <p>Mineral-rich feeds for goats, sheep, and rabbits</p>
+                </div>
 
-    <!-- Equipment -->
-    <div class="product-card" data-category="equipment">
-        <div class="image-placeholder">
-            <img src="images/farm-sprayers.jpg" alt="Farm Sprayers">
-            <span class="icon-overlay">💨</span>
-            <div class="no-image">
-                <span>💨</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Heavy Duty</span>
-        <h4>Farm Sprayers</h4>
-        <p>Professional sprayers for pesticides, herbicides, and crop protection</p>
-    </div>
+                <!-- Equipment -->
+                <div class="product-card" data-category="equipment">
+                    <div class="image-placeholder">
+                        <img src="images/farm-sprayers.jpg" alt="Farm Sprayers">
+                        <span class="icon-overlay">💨</span>
+                        <div class="no-image">
+                            <span>💨</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Heavy Duty</span>
+                    <h4>Farm Sprayers</h4>
+                    <p>Professional sprayers for pesticides, herbicides, and crop protection</p>
+                </div>
 
-    <div class="product-card" data-category="equipment">
-        <div class="image-placeholder">
-            <img src="images/farm-tools.jpg" alt="Farm Tools & Equipment">
-            <span class="icon-overlay">⛏️</span>
-            <div class="no-image">
-                <span>⛏️</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Essential</span>
-        <h4>Farm Tools & Equipment</h4>
-        <p>Durable jembes, hoes, rakes, and other essential farm tools</p>
-    </div>
+                <div class="product-card" data-category="equipment">
+                    <div class="image-placeholder">
+                        <img src="images/farm-tools.jpg" alt="Farm Tools & Equipment">
+                        <span class="icon-overlay">⛏️</span>
+                        <div class="no-image">
+                            <span>⛏️</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Essential</span>
+                    <h4>Farm Tools & Equipment</h4>
+                    <p>Durable jembes, hoes, rakes, and other essential farm tools</p>
+                </div>
 
-    <div class="product-card" data-category="equipment">
-        <div class="image-placeholder">
-            <img src="images/irrigation-equipment.jpg" alt="Irrigation Equipment">
-            <span class="icon-overlay">💧</span>
-            <div class="no-image">
-                <span>💧</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Irrigation</span>
-        <h4>Irrigation Equipment</h4>
-        <p>Complete irrigation systems including drip, sprinkler, and piping</p>
-    </div>
+                <div class="product-card" data-category="equipment">
+                    <div class="image-placeholder">
+                        <img src="images/irrigation-equipment.jpg" alt="Irrigation Equipment">
+                        <span class="icon-overlay">💧</span>
+                        <div class="no-image">
+                            <span>💧</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Irrigation</span>
+                    <h4>Irrigation Equipment</h4>
+                    <p>Complete irrigation systems including drip, sprinkler, and piping</p>
+                </div>
 
-    <div class="product-card" data-category="equipment">
-        <div class="image-placeholder">
-            <img src="images/pruning-tools.jpg" alt="Pruning & Harvesting Tools">
-            <span class="icon-overlay">✂️</span>
-            <div class="no-image">
-                <span>✂️</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Pruning</span>
-        <h4>Pruning & Harvesting Tools</h4>
-        <p>Professional shears, secateurs, and harvesting equipment</p>
-    </div>
+                <div class="product-card" data-category="equipment">
+                    <div class="image-placeholder">
+                        <img src="images/pruning-tools.jpg" alt="Pruning & Harvesting Tools">
+                        <span class="icon-overlay">✂️</span>
+                        <div class="no-image">
+                            <span>✂️</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Pruning</span>
+                    <h4>Pruning & Harvesting Tools</h4>
+                    <p>Professional shears, secateurs, and harvesting equipment</p>
+                </div>
 
-    <!-- Seeds & Fertilizers -->
-    <div class="product-card" data-category="seeds">
-        <div class="image-placeholder">
-            <img src="images/maize-seeds.jpg" alt="Quality Maize Seeds">
-            <span class="icon-overlay">🌽</span>
-            <div class="no-image">
-                <span>🌽</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Hybrid</span>
-        <h4>Quality Maize Seeds</h4>
-        <p>High-yield drought-tolerant hybrid maize varieties</p>
-    </div>
+                <!-- Seeds & Fertilizers -->
+                <div class="product-card" data-category="seeds">
+                    <div class="image-placeholder">
+                        <img src="images/maize-seeds.jpg" alt="Quality Maize Seeds">
+                        <span class="icon-overlay">🌽</span>
+                        <div class="no-image">
+                            <span>🌽</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Hybrid</span>
+                    <h4>Quality Maize Seeds</h4>
+                    <p>High-yield drought-tolerant hybrid maize varieties</p>
+                </div>
 
-    <div class="product-card" data-category="seeds">
-        <div class="image-placeholder">
-            <img src="images/vegetable-seeds.jpg" alt="Vegetable Seeds">
-            <span class="icon-overlay">🥬</span>
-            <div class="no-image">
-                <span>🥬</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Vegetable</span>
-        <h4>Vegetable Seeds</h4>
-        <p>High-germination vegetable seeds for kitchen gardens and commercial farming</p>
-    </div>
+                <div class="product-card" data-category="seeds">
+                    <div class="image-placeholder">
+                        <img src="images/vegetable-seeds.jpg" alt="Vegetable Seeds">
+                        <span class="icon-overlay">🥬</span>
+                        <div class="no-image">
+                            <span>🥬</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Vegetable</span>
+                    <h4>Vegetable Seeds</h4>
+                    <p>High-germination vegetable seeds for kitchen gardens and commercial farming</p>
+                </div>
 
-    <div class="product-card" data-category="seeds">
-        <div class="image-placeholder">
-            <img src="images/quality-fertilizers.jpg" alt="Quality Fertilizers">
-            <span class="icon-overlay">🧪</span>
-            <div class="no-image">
-                <span>🧪</span>
-                Add Image
-            </div>
-        </div>
-        <span class="product-badge">Fertilizer</span>
-        <h4>Quality Fertilizers</h4>
-        <p>Balanced NPK fertilizers and soil conditioners for all crops</p>
-    </div>
+                <div class="product-card" data-category="seeds">
+                    <div class="image-placeholder">
+                        <img src="images/quality-fertilizers.jpg" alt="Quality Fertilizers">
+                        <span class="icon-overlay">🧪</span>
+                        <div class="no-image">
+                            <span>🧪</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Fertilizer</span>
+                    <h4>Quality Fertilizers</h4>
+                    <p>Balanced NPK fertilizers and soil conditioners for all crops</p>
+                </div>
 
-    <div class="product-card" data-category="seeds">
-        <div class="image-placeholder">
-            <img src="images/organic-inputs.jpg" alt="Organic Farm Inputs">
-            <span class="icon-overlay">🌱</span>
-            <div class="no-image">
-                <span>🌱</span>
-                Add Image
+                <div class="product-card" data-category="seeds">
+                    <div class="image-placeholder">
+                        <img src="images/organic-inputs.jpg" alt="Organic Farm Inputs">
+                        <span class="icon-overlay">🌱</span>
+                        <div class="no-image">
+                            <span>🌱</span>
+                            Add Image
+                        </div>
+                    </div>
+                    <span class="product-badge">Organic</span>
+                    <h4>Organic Farm Inputs</h4>
+                    <p>Rich organic manure, compost, and natural soil conditioners</p>
+                </div>
             </div>
         </div>
-        <span class="product-badge">Organic</span>
-        <h4>Organic Farm Inputs</h4>
-        <p>Rich organic manure, compost, and natural soil conditioners</p>
-    </div>
-</div>
     </section>
-    
 
     <!-- ===== STATS ===== -->
     <section class="stats-section">
@@ -1580,7 +1653,7 @@
             </div>
             <div class="stat-item reveal">
                 <span class="stat-icon">⭐</span>
-                <span class="stat-number">20 Yrs</span>
+                <span class="stat-number">10 Yrs</span>
                 <span class="stat-label">Trusted Experience</span>
             </div>
         </div>
@@ -1593,111 +1666,59 @@
         </h2>
         <p>Visit us at Kwa-kilui market or reach out — we're here to help you succeed.</p>
         <div class="cta-buttons">
-            <a href="#veterinary" class="btn-primary">🐾 Veterinary Services</a>
-            <a href="#products" class="btn-secondary">🌾 Explore Products</a>
+            <a href="#services" class="btn-primary">Our Services</a>
+            <a href="#products" class="btn-secondary">Explore Products</a>
             <a href="blog.html" class="btn-tertiary">Read Our Blogs</a>
         </div>
     </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
     <section class="testimonials-section" id="testimonials">
-    <div class="container">
-        <div class="reveal" style="text-align:center;">
-            <span class="section-label">⭐ What Farmers Say</span>
-            <h2 class="section-title">
-                Trusted by <span class="highlight">Our Community</span>
-            </h2>
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">⭐ What Farmers Say</span>
+                <h2 class="section-title">
+                    Trusted by <span class="highlight">Our Community</span>
+                </h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The weather advisory helped me plan my planting season perfectly. I got better yields than ever before!"</p>
+                    <div class="testimonial-author">
+                        <strong>Joseph</strong>
+                        <span>Mixed Farmer, Kwa-kilui</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The seed matching advice was spot on. My crops thrived despite the unpredictable weather this season."</p>
+                    <div class="testimonial-author">
+                        <strong>Grace</strong>
+                        <span>Crop Farmer, Kwa-kilui</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The drenching and tick management services have kept my livestock healthy. Professional and reliable!"</p>
+                    <div class="testimonial-author">
+                        <strong>Samuel</strong>
+                        <span>Livestock Farmer, Ilika</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial-card reveal">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Kwa-Kilui Agrovet has transformed our dairy farm. Their feeds and vet services are top-notch!"</p>
-                <div class="testimonial-author">
-                    <strong>James</strong>
-                    <span>Dairy Farmer, Kwa-kilui</span>
-                </div>
-            </div>
-
-            <div class="testimonial-card reveal">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"The vet team diagnosed my cows quickly and saved them from a serious disease. Highly recommend!"</p>
-                <div class="testimonial-author">
-                    <strong>Mary</strong>
-                    <span>Livestock Farmer, Kiambu</span>
-                </div>
-            </div>
-
-            <div class="testimonial-card reveal">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>"Quality products at fair prices. The staff always give helpful advice on crop farming too."</p>
-                <div class="testimonial-author">
-                    <strong>Peter</strong>
-                    <span>Mixed Farmer, Kwa-kilui</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-.testimonials-section {
-    padding: 80px 20px;
-    background: linear-gradient(180deg, #f5f0ea 0%, #fcf9f5 100%);
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.testimonial-card {
-    background: #fff;
-    padding: 30px 25px;
-    border-radius: 30px 10px 30px 10px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
-    transition: all 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.03);
-}
-
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(45,94,59,0.06);
-}
-
-.testimonial-card .stars {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    color: #f5c842;
-}
-
-.testimonial-card p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #3a4a3a;
-    margin-bottom: 16px;
-    font-style: italic;
-}
-
-.testimonial-author strong {
-    display: block;
-    color: #0f2a1a;
-    font-size: 0.95rem;
-}
-
-.testimonial-author span {
-    color: #7a8a7a;
-    font-size: 0.85rem;
-}
-</style>
-    
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-grid">
             <div>
                 <h4>Kwa-Kilui Agrovet</h4>
-                <p>Quality veterinary services & farm supplies.</p>
+                <p>Weather advisory, seed matching &amp; farm supplies.</p>
             </div>
             <div>
                 <h4>Opening Hours</h4>
@@ -1711,7 +1732,6 @@
             <div>
                 <h4>Contact</h4>
                 <p>0710 930 725</p>
-                <!--<p>0710 930 725</p>-->
             </div>
             <div>
                 <h4>Email</h4>
@@ -1719,13 +1739,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Veterinary services & farm supplies.
+            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Weather advisory &amp; farm supplies.
         </div>
     </footer>
 
     <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
     <a href="https://wa.me/254710930725" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <span class="tooltip">Chat with us 💬</span>
+        <span class="tooltip">Chat with us</span>
         💬
     </a>
 
