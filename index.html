@@ -58,8 +58,7 @@
       ]
     }
     </script>
-    <title>Kwa-Kilui Agrovet — Grow With Us</title>
-    <style>
+   <style>
         /* ===== RESET & BASE ===== */
         * {
             margin: 0;
@@ -99,7 +98,6 @@
             overflow: hidden;
         }
 
-        /* Floating orbs */
         .orb {
             position: absolute;
             border-radius: 50%;
@@ -145,7 +143,6 @@
             }
         }
 
-        /* Wave shape at bottom of hero */
         .hero-wave {
             position: absolute;
             bottom: 0;
@@ -167,7 +164,6 @@
             fill: #fcf9f5;
         }
 
-        /* Hero content */
         .hero-content {
             position: relative;
             z-index: 2;
@@ -191,8 +187,7 @@
         }
 
         @keyframes pulseBadge {
-            0%,
-            100% {
+            0%, 100% {
                 transform: scale(1);
             }
             50% {
@@ -218,13 +213,12 @@
         .hero p {
             font-size: 1.3rem;
             color: rgba(255, 255, 255, 0.85);
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 35px;
             font-weight: 300;
             line-height: 1.7;
         }
 
-        /* Scroll indicator */
         .scroll-indicator {
             position: absolute;
             bottom: 140px;
@@ -262,8 +256,7 @@
         }
 
         @keyframes scrollDot {
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateX(-50%) translateY(0);
                 opacity: 1;
             }
@@ -274,8 +267,7 @@
         }
 
         @keyframes bounceDown {
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateX(-50%) translateY(0);
             }
             50% {
@@ -360,7 +352,6 @@
             line-height: 1.7;
         }
 
-        /* Offer grid */
         .offer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -446,6 +437,103 @@
             pointer-events: none;
         }
 
+        /* ===== VETERINARY SERVICES SECTION ===== */
+        .vet-section {
+            padding: 90px 20px 80px;
+            background: linear-gradient(180deg, #f5f0ea 0%, #e8e0d6 100%);
+            position: relative;
+        }
+
+        .vet-section .section-title {
+            text-align: center;
+        }
+
+        .vet-section .section-sub {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        .vet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        .vet-card {
+            background: #fff;
+            border-radius: 30px 10px 30px 10px;
+            padding: 35px 25px 30px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(45, 94, 59, 0.08);
+            border-radius: 10px 30px 10px 30px;
+        }
+
+        .vet-card .vet-icon {
+            font-size: 3.2rem;
+            display: block;
+            margin-bottom: 14px;
+            transition: transform 0.4s ease;
+        }
+
+        .vet-card:hover .vet-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .vet-card h4 {
+            font-size: 1.15rem;
+            color: #0f2a1a;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .vet-card p {
+            color: #5a6b5a;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .vet-card::after {
+            content: '🐾';
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 2rem;
+            color: rgba(45, 94, 59, 0.04);
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .vet-card:hover::after {
+            transform: rotate(90deg);
+            color: rgba(45, 94, 59, 0.08);
+        }
+
+        .vet-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #0f2a1a, #f5c842, #0f2a1a, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .vet-card:hover::before {
+            opacity: 1;
+        }
+
         /* ===== PRODUCTS SECTION ===== */
         .products-section {
             padding: 90px 20px 80px;
@@ -462,7 +550,6 @@
             margin: 0 auto 20px;
         }
 
-        /* Category tabs */
         .category-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -497,7 +584,6 @@
             box-shadow: 0 8px 25px rgba(45, 94, 59, 0.2);
         }
 
-        /* Products grid */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -564,7 +650,6 @@
             flex-grow: 1;
         }
 
-        /* Decorative element on cards */
         .product-card::after {
             content: '✦';
             position: absolute;
@@ -581,7 +666,6 @@
             color: rgba(45, 94, 59, 0.08);
         }
 
-        /* Product card accent line */
         .product-card::before {
             content: '';
             position: absolute;
@@ -692,8 +776,7 @@
         }
 
         @keyframes pulseWhatsApp {
-            0%,
-            100% {
+            0%, 100% {
                 box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
             }
             50% {
@@ -790,6 +873,27 @@
             background: #e6b835;
         }
 
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            border-color: #f5c842;
+            color: #f5c842;
+            transform: translateY(-4px);
+            background: rgba(245, 200, 66, 0.05);
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: #0a1f14;
@@ -864,6 +968,10 @@
                 grid-template-columns: 1fr 1fr;
             }
 
+            .vet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .products-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -898,6 +1006,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .vet-grid {
+                grid-template-columns: 1fr;
+            }
+
             .products-grid {
                 grid-template-columns: 1fr;
             }
@@ -911,7 +1023,8 @@
                 text-align: center;
             }
 
-            .btn-primary {
+            .btn-primary,
+            .btn-secondary {
                 padding: 14px 30px;
                 font-size: 0.95rem;
                 width: 100%;
@@ -941,14 +1054,14 @@
         <div class="orb orb-3"></div>
 
         <div class="hero-content">
-            <div class="hero-badge">🌱 Serving Farmers Since 2015</div>
+            <div class="hero-badge">🐾 Veterinary Services & Farm Supplies Since 2015</div>
             <h1>
-                Grow More<br>
-                <span class="highlight">With Kwa-Kilui Agrovet</span>
+                Healthy Livestock,<br>
+                <span class="highlight">Thriving Farms</span>
             </h1>
             <p>
-                Premium animal feeds, farm equipment, certified seeds, fertilizers, and expert advice —
-                all under one roof. Your partner in sustainable farming.
+                Professional veterinary services, premium animal feeds, farm equipment, certified seeds, 
+                and fertilizers — all under one roof at Kwa-Kilui Agrovet.
             </p>
         </div>
 
@@ -980,7 +1093,7 @@
                     <span class="highlight">To Farm Smarter</span>
                 </h2>
                 <p class="section-sub">
-                    From high-quality inputs to expert guidance — we empower farmers to achieve better yields and healthier livestock.
+                    From professional veterinary care to high-quality farm inputs — we empower farmers to achieve better yields and healthier livestock.
                 </p>
             </div>
 
@@ -1008,9 +1121,62 @@
 
                 <div class="offer-card reveal">
                     <span class="card-number">04</span>
-                    <div class="offer-icon">🧑‍🌾</div>
-                    <h3>Expert Agricultural Advice</h3>
-                    <p>Get personalized guidance from our experienced agronomists — we're here to help you succeed.</p>
+                    <div class="offer-icon">👨‍⚕️</div>
+                    <h3>Professional Veterinary Services</h3>
+                    <p>Expert livestock health consultations, disease diagnosis, treatment, and herd management advice from qualified professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VETERINARY SERVICES SECTION ===== -->
+    <section class="vet-section" id="veterinary">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">🐾 Veterinary Services</span>
+                <h2 class="section-title">
+                    Professional <span class="highlight">Livestock Health</span> Care
+                </h2>
+                <p class="section-sub" style="margin:0 auto 10px;">
+                    Our qualified veterinary team provides comprehensive health services to keep your livestock healthy and productive.
+                </p>
+            </div>
+
+            <div class="vet-grid">
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🏥</span>
+                    <h4>Health Consultations</h4>
+                    <p>Professional livestock health assessments and expert advice on disease prevention and management.</p>
+                </div>
+
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🩺</span>
+                    <h4>Disease Diagnosis & Treatment</h4>
+                    <p>Accurate diagnosis and effective treatment plans for all livestock diseases and health conditions.</p>
+                </div>
+
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🐄</span>
+                    <h4>Herd Health Management</h4>
+                    <p>Comprehensive herd health programs including vaccination supervision and biosecurity advice.</p>
+                </div>
+
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🤰</span>
+                    <h4>Artificial Insemination</h4>
+                    <p>Professional AI services to improve your herd genetics and productivity.</p>
+                </div>
+
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🥛</span>
+                    <h4>Dairy & Livestock Nutrition</h4>
+                    <p>Specialized nutritional advice for optimal milk production and livestock growth.</p>
+                </div>
+
+                <div class="vet-card reveal">
+                    <span class="vet-icon">🚑</span>
+                    <h4>Emergency Veterinary Care</h4>
+                    <p>Prompt emergency response for sick or injured livestock to minimize losses.</p>
                 </div>
             </div>
         </div>
@@ -1022,10 +1188,13 @@
             <div class="reveal" style="text-align:center;">
                 <span class="section-label">🛒 Our Products</span>
                 <h2 class="section-title">
-                    Quality Products for <span class="highlight">Every Need</span>
+                    Quality Farm <span class="highlight">Supplies</span>
                 </h2>
                 <p class="section-sub" style="margin:0 auto 10px;">
                     Carefully selected, premium-quality agricultural products to help you grow more and farm better.
+                </p>
+                <p style="font-size:0.9rem; color:#888; margin-top:-5px;">
+                    <em>Note: We provide veterinary services but do not sell animal drugs or medications.</em>
                 </p>
             </div>
 
@@ -1035,7 +1204,6 @@
                 <button class="category-tab" data-category="feeds">🐄 Animal Feeds</button>
                 <button class="category-tab" data-category="equipment">🚜 Farm Equipment</button>
                 <button class="category-tab" data-category="seeds">🌱 Seeds & Fertilizers</button>
-                <button class="category-tab" data-category="health">💉 Animal Health</button>
             </div>
 
             <!-- Products Grid -->
@@ -1126,21 +1294,6 @@
                     <h4>Organic Compost Manure</h4>
                     <p>Rich organic manure for soil conditioning</p>
                 </div>
-
-                <!-- Animal Health -->
-                <div class="product-card" data-category="health">
-                    <span class="product-icon">💉</span>
-                    <span class="product-badge">Vaccine</span>
-                    <h4>Livestock Vaccines</h4>
-                    <p>Vaccines for FMD, CBPP, and other livestock diseases</p>
-                </div>
-
-                <div class="product-card" data-category="health">
-                    <span class="product-icon">🧴</span>
-                    <span class="product-badge">Treatment</span>
-                    <h4>Dewormers & Acaricides</h4>
-                    <p>Effective dewormers and tick control solutions</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1184,7 +1337,8 @@
         </h2>
         <p>Visit us at Kwa-kilui market or reach out — we're here to help you succeed.</p>
         <div class="cta-buttons">
-            <a href="#products" class="btn-primary">🌾 Explore Our Products</a>
+            <a href="#veterinary" class="btn-primary">🐾 Veterinary Services</a>
+            <a href="#products" class="btn-secondary">🌾 Explore Products</a>
         </div>
     </section>
 
@@ -1193,11 +1347,11 @@
         <div class="footer-grid">
             <div>
                 <h4>🌿 Kwa-Kilui Agrovet</h4>
-                <p>Your trusted agricultural partner since 2015.</p>
+                <p>Veterinary services & farm supplies since 2015.</p>
             </div>
             <div>
                 <h4>📍 Location</h4>
-                <p>Kwa-kilui market</p>
+                <p>Kwa-kilui market, off the main road</p>
             </div>
             <div>
                 <h4>📞 Contact</h4>
@@ -1210,7 +1364,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Growing together, sustainably.
+            &copy; 2026 <strong>Kwa-Kilui Agrovet</strong> — Veterinary services & farm supplies.
         </div>
     </footer>
 
@@ -1256,9 +1410,7 @@
 
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                // Remove active class from all tabs
                 tabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
                 this.classList.add('active');
 
                 const category = this.dataset.category;
@@ -1274,14 +1426,13 @@
             });
         });
 
-        // Add fadeIn animation for filtered products
         const style = document.createElement('style');
         style.textContent = `
-                    @keyframes fadeIn {
-                        0% { opacity: 0; transform: scale(0.95); }
-                        100% { opacity: 1; transform: scale(1); }
-                    }
-                `;
+            @keyframes fadeIn {
+                0% { opacity: 0; transform: scale(0.95); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+        `;
         document.head.appendChild(style);
     </script>
 
